@@ -39,4 +39,10 @@ public class ProductsController {
     public void updateProduct(@PathVariable int productId, @RequestBody Product product) {
         productDao.update(productId, product);
     }
+
+    @RequestMapping(path = "/products/{productId}", method = RequestMethod.DELETE)
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    public void deleteProduct(@PathVariable int productId){
+        productDao.delete(productId);
+    }
 }

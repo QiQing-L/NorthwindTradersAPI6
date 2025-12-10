@@ -12,5 +12,5 @@ public interface IProductDao {
 
     Product insert(Product product);
     void update(int id, Product product);
-    void delete();
+    void delete(int productId);
 }
